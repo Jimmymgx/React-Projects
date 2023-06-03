@@ -7,16 +7,12 @@ import Home from "./pages/home";
 import Javascript from "./pages/javascript";
 import Css from "./pages/css";
 import Html from "./pages/html";
-
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
-    errorElement: (
-      <h1 style={{ color: "black", textAlign: "center" }}>
-        .....SORRY PAGE NOT FOUND.....
-      </h1>
-    ),
+   
   },
   {
     path: "/javascript",
@@ -50,6 +46,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+     <HelmetProvider>
+     <RouterProvider router={router} />
+     </HelmetProvider>
+    
   </React.StrictMode>
 );

@@ -1,8 +1,8 @@
 
-
+import "./Footer.css"
 const Footer = () => {
     return (
-        <div>
+        <div className="myFooter">
             <footer>
         Designed and developed by Courses4Arab.com
         <span>🧡</span>
