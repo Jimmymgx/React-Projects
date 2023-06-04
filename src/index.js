@@ -7,7 +7,8 @@ import Home from "./pages/home";
 import Javascript from "./pages/javascript";
 import Css from "./pages/css";
 import Html from "./pages/html";
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider } from 'react-helmet-async';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,3 +53,5 @@ root.render(
     
   </React.StrictMode>
 );
+
+serviceWorkerRegistration.register();
